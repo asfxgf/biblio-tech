@@ -1,0 +1,10 @@
+<h1>Voici la liste de tous les livres :</h1>
+<% @livres.each do |livre| %>
+<div>
+  <%= livre.name %>
+  <%= livre.category %>
+  <%= livre.description %>
+  <%= livre.language %>
+  <%= livre.author %>
+</div>
+<% end %>
