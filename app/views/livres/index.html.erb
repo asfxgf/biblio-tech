@@ -1,10 +1,15 @@
 <h1>Voici la liste de tous les livres :</h1>
-<% @livres.each do |livre| %>
-<div>
-  <%= livre.name %>
-  <%= livre.category %>
-  <%= livre.description %>
-  <%= livre.language %>
-  <%= livre.author %>
-</div>
+<% @livre.each do |livre| %>
+  <div>
+    <%= cl_image_tag(livre.picture, :width => 100, :height => 150, :crop => :fill) %>
+    <%= livre.name %>
+    <%= livre.category %>
+    <%= livre.description %>
+    <%= livre.language %>
+    <%= livre.author %>
+    <%= livre.id %>
+    <%= link_to "En savoir plus", livre_path(livre.id) %>
+
+  </div>
 <% end %>
+<%= link_to "retour à l'accueil", root_path %>

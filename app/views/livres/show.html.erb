@@ -1,0 +1,11 @@
+<h4> Titre : <%= @livre.name %></h4>
+<p> Description : <%= @livre.description %></p>
+<p> Ecrit par : <%= @livre.author %></p>
+<%= cl_image_tag(@livre.picture, :width => 100, :height => 150, :crop => :fill) %>
+
+
+<!-- Ici on va coder un truc pour afficher le nombre de prêteurs-->
+<p>Ce livre appartient à 4 personnes:</p>
+<%= link_to "voir si ce livre est disponible à Paris", announces_path %>
+<br>
+<%= link_to "retour à l'accueil", root_path %>

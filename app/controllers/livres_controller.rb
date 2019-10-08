@@ -1,13 +1,9 @@
 class LivresController < ApplicationController
-  def create
-    @livres = Livre.new
-  end
-
   def index
-    @livres = Livre.all
+    @livre = Livre.all
   end
 
-  def display
-    @livres = Livre.all
+  def show
+    @livre = Livre.find(params[:id].to_i)
   end
 end

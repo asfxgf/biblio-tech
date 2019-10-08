@@ -1,0 +1,13 @@
+<h1>Ici on affiche la liste des annonces de ce type de livre</h1>
+
+<!-- Ici on affiche la liste de tous les livres avec une possibilité dé trier par catégorie ou une search par ordre alphabétique-->
+<% @announces.each do |announce| %>
+  <div>
+    <h4><%= announce.date_start %></h4>
+    <h4><%= announce.date_end %></h4>
+    <h4><%= announce.city %></h4>
+    <h4><%= announce.user.email %></h4>
+    <h4><%= announce.livre %></h4>
+
+  </div>
+<% end %>

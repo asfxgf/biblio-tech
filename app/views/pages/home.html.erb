@@ -1,10 +1,19 @@
 <h1>Biblio-tech</h1>
-<p>Le site qui te permet d'emprunter des livres gratuitement et simplement !</p>
-  <%= link_to "TOUS LES LIVRES", livres_path(@livre) %>
-
-<h2>Choisis une catégorie :</h2>
-<ul>
-  <li><a href="#">Entrepreneurship</li>
-  <li><a href="#">Marketing</li>
-  <li><a href="#">Programmation</li>
-</ul>
+<h2>Le site qui te permet d'emprunter des livres <b>gratuitement</b> et simplement <b>à Paris !</b></h2>
+<h3>Ici tu peux prêter et emprunter tes livres facilement, en toute confiance.</h3>
+<br>
+<br>
+<h4>Si tu veux emprunter un livre, c'est facile !</h4>
+<br>
+<p>1/ Je m'inscris</p>
+<p>2/ Je valide mon profil</p>
+<p>3/ Je choisis mon livre et mes dates</p>
+<%= link_to "TROUVER UN LIVRE !", livres_path(@livre) %>
+<br>
+<br>
+<h4>Si tu veux prêter tes livres, c'est facile !</h4>
+<br>
+<p>1/ Je m'inscris</p>
+<p>2/ Je valide mon profil</p>
+<p>3/ Je créer mon annonce</p>
+<%= link_to "JE PRETE MON LIVRE !", new_announce_path(@announce) %>
