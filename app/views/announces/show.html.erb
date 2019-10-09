@@ -1,0 +1,6 @@
+<h1>Annonce numéro : <%= @announce.id %></h1>
+<h1>Ce livre appartient à : <%= @announce.user.email %></h1>
+<h1>Il propose de le louer du : <%= @announce.date_start %> Au : <%= @announce.date_end %> A : <%= @announce.city %></h1>
+<h1><a href="#">Entrer en contact</a></h1>
+<br>
+<%= link_to "Emprunter ce livre", new_booking_path %>

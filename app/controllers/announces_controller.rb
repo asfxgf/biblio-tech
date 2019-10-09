@@ -15,6 +15,7 @@ class AnnouncesController < ApplicationController
   def create
     @announce = Announce.new(announce_params)
     @announce.user = current_user
+    @announce.livre = livre_url
     if @announce.save
       redirect_to announces_path
     else
@@ -37,6 +38,6 @@ class AnnouncesController < ApplicationController
   private
 
   def announce_params
-    params.require(:announce).permit(:city, :date_start, :date_end, :livre)
+    params.require(:announce).permit(:city, :date_start, :date_end)
   end
 end

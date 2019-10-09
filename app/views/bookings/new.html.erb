@@ -1,11 +1,9 @@
-<h1>Remplis les informations pour prêter tes livres</h1>
+<h1>Remplis les informations :</h1>
 
- <%= simple_form_for @announce do |f| %>
- <%= f.input :city, label: "Dans quelle ville est-il disponible ?" %>
+ <%= simple_form_for @booking do |f| %>
  <%= f.input :date_start, label: "A partir de quand le livre est-il disponible ?" %>
  <%= f.input :date_end, label: "Jusqu'à quand souhaites-tu le laisser disponible au prêt ?" %>
- <%= f.input :livre_id, label: "Quel est l'id du livre que tu veux prêter ?" %>
- <%= f.button :submit, "Je prête mon livre", class: "my-button" %>
+ <%= f.button :submit, "J'empreinte prête ce livre", class: "my-button" %>
 <% end %>
 
 <h2>Ton livre n'est pas dans la liste ?</h2>

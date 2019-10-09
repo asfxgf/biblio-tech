@@ -9,6 +9,7 @@ puts "starting seed"
 
 Livre.destroy_all
 User.destroy_all
+Announce.destroy_all
 
 
 puts "creating a user (Quentin)"
@@ -57,11 +58,10 @@ puts "book 2 ..."
 b = Livre.create!(
     name: "L'entreprise du bonheur",
     category: "entrepreneurship",
-    description: "L'histoire de l'entreprise Zappos ",
+    description: "L'histoire de l'entreprise Zappos",
     language: "french",
     author: "Tony Hsieh",
     picture: "v1570538759/41S0ZTVo9lL_qr3gvo.jpg"
     )
 
 puts "book 2 done"
-
